@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="karakalpak">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0f14" />
+  <title>GULAYSHA TEREPINEN JARATILGAN GAME</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- CMatrix background -->
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <header class="top">
+    <div class="brand">
+      <div class="title">🧱 Titris <span class="badge">CMatrix</span></div>
+      <div class="sub">Telefondı onga shepke joqariga tomenge jiljitsan  — top labirint ishinde júredi </div>
+    </div>
+
+    <div class="controls">
+      <button id="btnStart" class="btn">Start / </button>
+      <button id="btnReset" class="btn btn-ghost">Janadan baslaw</button>
+      <button id="btnCal" class="btn btn-ghost" disabled>Giroskop</button>
+      <button id="btnMute" class="btn btn-ghost" aria-pressed="false">Dawis: ON</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <div class="stat"><span>BASQISH</span><b id="sLevel">1</b></div>
+      <div class="stat"><span>WAQIT</span><b id="sTime">0.00</b></div>
+      <div class="stat"><span></span><b id="sBest">—</b></div>
+      <div class="stat"><span>status</span><b id="sStatus">idle</b></div>
+      <div class="stat"><span></span><b id="sGamma">0.0</b></div>
+      <div class="stat"><span></span><b id="sBeta">0.0</b></div>
+      <div class="stat"><span></span><b id="sMoves">0</b></div>
+      <div class="stat"><span>PFS</span><b id="sFps">—</b></div>
+    </section>
+
+    <section class="game">
+      <canvas id="cv" aria-label="maze canvas"></canvas>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+      <div class="pwa">
+        <button id="btnInstall" class="btn btn-ghost" hidden>Install App(Game ni juklep aliw )</button>
+        <span class="hint"> TELEFONNAN : “Start  ” basıń. HTTPS (SECPENTESTER) </span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
